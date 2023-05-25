@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "target": "es2018",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    // "sourceMap": true,
+    "inlineSourceMap": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types",
+      "../../node_modules/@types"
+    ],
+    "baseUrl": "./src",
+    "include": ["./src/**/*"]
+    // "inlineSources": true,
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
