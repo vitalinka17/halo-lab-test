@@ -24,3 +24,10 @@ export const DropDownItemStyled = styled.div`
   padding: 10px 0 10px 0;
   text-align: center;
 `;
+
+export const DoctorItemContainerStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+`;
