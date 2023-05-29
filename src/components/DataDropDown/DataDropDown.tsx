@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
 import { Item as CitiesItem } from "../../store/reducers/citySlice";
 import { Item as DoctorItem } from "../../store/reducers/doctorSlice";
-
 import {
   ButtonStyled,
   DropDownContainerStyled,
   DropDownItemStyled,
+  DoctorItemContainerStyled,
 } from "./DropDownStyled";
 
 type Item = Partial<Omit<DoctorItem, "id" | "name">> & CitiesItem;
@@ -54,10 +54,10 @@ const DataDropDown: FC<Props> = ({
               }}
               key={id}
             >
-              <div>
+              <DoctorItemContainerStyled>
                 <span>{value}</span>
                 <span>{surname}</span>
-              </div>
+              </DoctorItemContainerStyled>
             </DropDownItemStyled>
           ))}
         </DropDownContainerStyled>

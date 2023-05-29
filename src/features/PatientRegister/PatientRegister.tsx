@@ -8,10 +8,7 @@ import {
   citiesMetaSelector,
 } from "../../store/selectors/cities";
 import { doctorsMetaSelector } from "../../store/selectors/doctor";
-import {
-  specialtyDataSelector,
-  specialtyMetaSelector,
-} from "../../store/selectors/doctorSpecialty";
+import { specialtyMetaSelector } from "../../store/selectors/doctorSpecialty";
 import { genders } from "../../helpers/genders";
 // eslint-disable-next-line import/namespace
 import { useFilteredDoctor } from "../../hooks/useFilteredDoctor";
@@ -25,7 +22,6 @@ import { ButtonStyled } from "../../components/DataDropDown/DropDownStyled";
 
 const PatientRegister = () => {
   const cities = useSelector(citiesDataSelector);
-  const doctorSpecialty = useSelector(specialtyDataSelector);
   const { loading: citiesLoading } = useSelector(citiesMetaSelector);
   const { loading: doctorsLoading } = useSelector(doctorsMetaSelector);
   const { loading: specialtyLoading } = useSelector(specialtyMetaSelector);
@@ -35,13 +31,7 @@ const PatientRegister = () => {
     mode: "onChange",
     resolver: yupResolver<Yup.AnyObjectSchema>(schema),
   });
-  const {
-    getValues,
-    formState: { isValid, errors },
-    setValue,
-    watch,
-    handleSubmit,
-  } = methods;
+  const { getValues, setValue, watch, handleSubmit } = methods;
 
   const values = getValues();
 
