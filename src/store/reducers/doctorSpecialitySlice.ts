@@ -1,6 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-type Params = { gender?: "Male" | "Female"; maxAge?: number; minAge?: number };
+export type Params = {
+  gender?: "Male" | "Female";
+  maxAge?: number;
+  minAge?: number;
+};
 
 type Item = {
   id: string;
